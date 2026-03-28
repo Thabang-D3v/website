@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="How Hypertext and the World Wide Web Work — WPR171 Project" />
+  <title>HyperWeb | How It Works</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ===== HEADER ===== -->
+  <header>
+    <div>
+      <div class="site-logo">Hyper<span>Web</span></div>
+      <div class="site-tagline">Hypertext &amp; the World Wide Web</div>
+    </div>
+  </header>
+
+  <!-- ===== NAVIGATION ===== -->
+  <nav aria-label="Main navigation">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="history.html">History</a></li>
+      <li><a href="how-it-works.html" class="active">How It Works</a></li>
+    </ul>
+  </nav>
+
+  <!-- ===== MAIN ===== -->
+  <main>
+
+    <!-- Intro -->
+    <section class="full-section" aria-labelledby="works-heading">
+      <h2 id="works-heading">How the World Wide Web Works</h2>
+      <p>
+        The Web is built on three core technologies invented by Tim Berners-Lee:
+        <strong>HTML</strong> (the content), <strong>HTTP</strong> (the transport), and
+        <strong>URLs</strong> (the addressing). Together, they form a global hypertext system
+        where any document can link to any other.
+      </p>
+    </section>
+
+    <!-- Request-Response Diagram -->
+    <section class="diagram-section" aria-labelledby="diagram-heading">
+      <h2 id="diagram-heading">How a Web Request Works</h2>
+      <p class="subtitle">What happens when you type a URL and press Enter</p>
+
+      <!-- Step-by-step flow -->
+      <div class="flow" style="gap:0.25rem; flex-wrap:wrap; justify-content:center; margin-bottom:2rem;">
+        <div class="flow-node">1. User types URL<br/><small style="font-weight:300;font-size:0.75rem;">in browser</small></div>
+        <div class="flow-arrow">→</div>
+        <div class="flow-node accent2">2. DNS Lookup<br/><small style="font-weight:300;font-size:0.75rem;">domain → IP address</small></div>
+        <div class="flow-arrow">→</div>
+        <div class="flow-node">3. HTTP Request<br/><small style="font-weight:300;font-size:0.75rem;">GET /page HTTP/1.1</small></div>
+        <div class="flow-arrow">→</div>
+        <div class="flow-node accent">4. Web Server<br/><small style="font-weight:300;font-size:0.75rem;">processes request</small></div>
+      </div>
+      <div class="flow" style="gap:0.25rem; flex-wrap:wrap; justify-content:center;">
+        <div class="flow-node accent">5. HTTP Response<br/><small style="font-weight:300;font-size:0.75rem;">200 OK + HTML</small></div>
+        <div class="flow-arrow">→</div>
+        <div class="flow-node accent2">6. Browser Renders<br/><small style="font-weight:300;font-size:0.75rem;">parses HTML &amp; CSS</small></div>
+        <div class="flow-arrow">→</div>
+        <div class="flow-node">7. Page Displayed<br/><small style="font-weight:300;font-size:0.75rem;">with hyperlinks</small></div>
+        <div class="flow-arrow">→</div>
+        <div class="flow-node accent2">8. User Clicks Link<br/><small style="font-weight:300;font-size:0.75rem;">cycle repeats</small></div>
+      </div>
+    </section>
+
+    <!-- Three pillars -->
+    <section class="cards-section" aria-labelledby="pillars-heading">
+      <h2 id="pillars-heading">The Three Pillars of the Web</h2>
+      <div class="cards-grid">
+        <article class="card">
+          <div class="card-icon">📝</div>
+          <h3>HTML — HyperText Markup Language</h3>
+          <p>
+            HTML is the language used to write web pages. It uses
+            <em>tags</em> to mark up content — headings, paragraphs, images, tables,
+            and crucially, <strong>hyperlinks</strong> (<code>&lt;a href="..."&gt;</code>)
+            that connect pages.
+          </p>
+          <p style="font-size:0.85rem;color:#6b6b6b;margin:0;">
+            Current version: HTML5 (2014)
+          </p>
+        </article>
+        <article class="card">
+          <div class="card-icon">🔄</div>
+          <h3>HTTP — HyperText Transfer Protocol</h3>
+          <p>
+            HTTP is the communication protocol that governs how browsers request
+            documents from servers. A request ("GET this page") and a response
+            ("200 OK — here is the HTML") form the basis of every web interaction.
+          </p>
+          <p style="font-size:0.85rem;color:#6b6b6b;margin:0;">
+            Current version: HTTP/3 (2022)
+          </p>
+        </article>
+        <article class="card">
+          <div class="card-icon">📌</div>
+          <h3>URL — Uniform Resource Locator</h3>
+          <p>
+            A URL is a unique address for every resource on the Web. It specifies
+            the protocol (<code>https://</code>), the domain, and the path to
+            the specific document — enabling any page to link to any other page.
+          </p>
+          <p style="font-size:0.85rem;color:#6b6b6b;margin:0;">
+            Standard: RFC 3986
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <!-- URL anatomy diagram -->
+    <section class="diagram-section" aria-labelledby="url-heading">
+      <h2 id="url-heading">Anatomy of a URL</h2>
+      <p class="subtitle">Every URL is made up of distinct parts</p>
+      <svg viewBox="0 0 680 160" xmlns="http://www.w3.org/2000/svg" style="max-width:680px;width:100%;">
+        <!-- URL bar background -->
+        <rect x="20" y="30" width="640" height="44" rx="8" fill="#1a3a5c"/>
+        <!-- URL text segments with colour coding -->
+        <text x="36"  y="58" font-family="Courier New, monospace" font-size="15" fill="#c8873a" font-weight="bold">https://</text>
+        <text x="120" y="58" font-family="Courier New, monospace" font-size="15" fill="#7ec8e3">www.example</text>
+        <text x="263" y="58" font-family="Courier New, monospace" font-size="15" fill="#ffffff">.com</text>
+        <text x="310" y="58" font-family="Courier New, monospace" font-size="15" fill="#a8d8a8">/page</text>
+        <text x="370" y="58" font-family="Courier New, monospace" font-size="15" fill="#f0c070">?query=web</text>
+        <text x="496" y="58" font-family="Courier New, monospace" font-size="15" fill="#e88ea0">#section</text>
+
+        <!-- Labels below -->
+        <line x1="68"  y1="74" x2="68"  y2="95" stroke="#c8873a" stroke-width="1.5"/>
+        <text x="68"  y="110" text-anchor="middle" font-family="Georgia,serif" font-size="10" fill="#c8873a">Protocol</text>
+
+        <line x1="188" y1="74" x2="188" y2="95" stroke="#7ec8e3" stroke-width="1.5"/>
+        <text x="188" y="110" text-anchor="middle" font-family="Georgia,serif" font-size="10" fill="#7ec8e3">Subdomain</text>
+
+        <line x1="278" y1="74" x2="278" y2="95" stroke="#ffffff" stroke-width="1.5"/>
+        <text x="278" y="110" text-anchor="middle" font-family="Georgia,serif" font-size="10" fill="#888">Domain</text>
+        <text x="278" y="123" text-anchor="middle" font-family="Georgia,serif" font-size="10" fill="#888">&amp; TLD</text>
+
+        <line x1="333" y1="74" x2="333" y2="95" stroke="#a8d8a8" stroke-width="1.5"/>
+        <text x="333" y="110" text-anchor="middle" font-family="Georgia,serif" font-size="10" fill="#a8d8a8">Path</text>
+
+        <line x1="436" y1="74" x2="436" y2="95" stroke="#f0c070" stroke-width="1.5"/>
+        <text x="436" y="110" text-anchor="middle" font-family="Georgia,serif" font-size="10" fill="#f0c070">Query</text>
+        <text x="436" y="123" text-anchor="middle" font-family="Georgia,serif" font-size="10" fill="#f0c070">String</text>
+
+        <line x1="544" y1="74" x2="544" y2="95" stroke="#e88ea0" stroke-width="1.5"/>
+        <text x="544" y="110" text-anchor="middle" font-family="Georgia,serif" font-size="10" fill="#e88ea0">Fragment</text>
+        <text x="544" y="123" text-anchor="middle" font-family="Georgia,serif" font-size="10" fill="#e88ea0">(anchor)</text>
+      </svg>
+    </section>
+
+    <!-- How HTML hyperlinks work -->
+    <section class="two-col-reverse" aria-labelledby="html-heading">
+      <aside class="info-box">
+        <h3>HTML Hyperlink Anatomy</h3>
+        <ul>
+          <li><code>&lt;a&gt;</code> — the anchor element</li>
+          <li><code>href</code> — destination URL or path</li>
+          <li><code>target</code> — where to open the link</li>
+          <li><code>rel</code> — relationship to linked page</li>
+          <li><code>title</code> — tooltip text on hover</li>
+        </ul>
+        <div style="margin-top:1rem; background:#f0f5fa; border-radius:6px; padding:1rem; font-family:'Courier New',monospace; font-size:0.82rem; color:#1a3a5c; line-height:1.6;">
+          &lt;<span style="color:#3a7ca8">a</span><br/>
+          &nbsp;&nbsp;<span style="color:#c8873a">href</span>="<span style="color:#2a7a2a">https://info.cern.ch</span>"<br/>
+          &nbsp;&nbsp;<span style="color:#c8873a">target</span>="<span style="color:#2a7a2a">_blank</span>"<br/>
+          &nbsp;&nbsp;<span style="color:#c8873a">rel</span>="<span style="color:#2a7a2a">noopener</span>"<br/>
+          &gt;<br/>
+          &nbsp;&nbsp;First Website<br/>
+          &lt;/<span style="color:#3a7ca8">a</span>&gt;
+        </div>
+      </aside>
+      <div class="content-panel">
+        <h2 id="html-heading">Hyperlinks in HTML</h2>
+        <p>
+          A hyperlink is the fundamental unit of the Web. It is created using the HTML anchor
+          tag <code>&lt;a&gt;</code>, which wraps around any piece of content — text, images,
+          buttons — and turns it into a clickable link.
+        </p>
+        <p>
+          The <code>href</code> (Hypertext REFerence) attribute specifies the destination:
+          it can be an absolute URL (pointing to any site on the web), a relative URL
+          (pointing to another page in the same website), an anchor to a section on the
+          same page, or even a <code>mailto:</code> link to open an email client.
+        </p>
+        <h3 style="margin-top:1rem;">Types of Hyperlinks</h3>
+        <div class="table-wrapper">
+          <table>
+            <thead>
+              <tr><th>Type</th><th>Example</th><th>Use Case</th></tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Absolute</td>
+                <td><code>https://w3.org</code></td>
+                <td>Linking to external websites</td>
+              </tr>
+              <tr>
+                <td>Relative</td>
+                <td><code>about.html</code></td>
+                <td>Linking between pages in the same site</td>
+              </tr>
+              <tr>
+                <td>Anchor</td>
+                <td><code>#section-id</code></td>
+                <td>Jumping to a section on the same page</td>
+              </tr>
+              <tr>
+                <td>Email</td>
+                <td><code>mailto:info@example.com</code></td>
+                <td>Opening the user's email client</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- Design Principles Applied -->
+    <section class="full-section" aria-labelledby="principles-heading">
+      <h2 id="principles-heading">Web Design Principles in Practice</h2>
+      <p>Good websites apply established design principles to make information clear, consistent, and usable.</p>
+      <div class="table-wrapper">
+        <table>
+          <thead>
+            <tr>
+              <th>Principle</th>
+              <th>Definition</th>
+              <th>Example on This Site</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Structure</strong></td>
+              <td>Organise information into a clear, logical hierarchy</td>
+              <td>Header → Nav → Main content → Footer; semantic HTML5 tags</td>
+            </tr>
+            <tr>
+              <td><strong>Simplicity</strong></td>
+              <td>Include only what is necessary; reduce clutter</td>
+              <td>Clean layout, limited colour palette, no decorative distractions</td>
+            </tr>
+            <tr>
+              <td><strong>Visibility</strong></td>
+              <td>Make important elements easy to see and find</td>
+              <td>Large headings, contrasting buttons, clear navigation labels</td>
+            </tr>
+            <tr>
+              <td><strong>Feedback</strong></td>
+              <td>Confirm user actions with visual responses</td>
+              <td>Hover effects on menu items and cards; active link highlighting</td>
+            </tr>
+            <tr>
+              <td><strong>Tolerance</strong></td>
+              <td>Allow users to navigate without getting stuck</td>
+              <td>Navigation is always visible; every page links back to all others</td>
+            </tr>
+            <tr>
+              <td><strong>Reuse</strong></td>
+              <td>Use consistent components and styles throughout</td>
+              <td>Single external CSS file; same header, nav and footer on all pages</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Impact section -->
+    <section class="cards-section" aria-labelledby="impact-heading">
+      <h2 id="impact-heading">The Impact of Hypertext</h2>
+      <div class="cards-grid">
+        <article class="card">
+          <div class="card-icon">📚</div>
+          <h3>Education</h3>
+          <p>Online learning platforms, Wikipedia, academic journals, and MOOCs have made knowledge freely accessible to billions of people worldwide.</p>
+        </article>
+        <article class="card">
+          <div class="card-icon">🛒</div>
+          <h3>Commerce</h3>
+          <p>E-commerce generates trillions in revenue annually. Hyperlinks are the pathways through which consumers discover, evaluate, and purchase products.</p>
+        </article>
+        <article class="card">
+          <div class="card-icon">🤝</div>
+          <h3>Communication</h3>
+          <p>Social media, email, messaging platforms, and video calls are all built on the Web's infrastructure of linked, addressable resources.</p>
+        </article>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <p><strong>HyperWeb</strong> — WPR171 Web Programming Project &copy; 2026</p>
+    <p>Belgium Campus iTversity &nbsp;|&nbsp; Group Project Milestone 1</p>
+  </footer>
+
+</body>
+</html>

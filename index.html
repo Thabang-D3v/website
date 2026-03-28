@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Exploring Hypertext and the World Wide Web — WPR171 Project" />
+  <title>HyperWeb | Home</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ===== HEADER ===== -->
+  <header>
+    <div>
+      <div class="site-logo">Hyper<span>Web</span></div>
+      <div class="site-tagline">Hypertext &amp; the World Wide Web</div>
+    </div>
+  </header>
+
+  <!-- ===== NAVIGATION ===== -->
+  <nav aria-label="Main navigation">
+    <ul>
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="history.html">History</a></li>
+      <li><a href="how-it-works.html">How It Works</a></li>
+    </ul>
+  </nav>
+
+  <!-- ===== MAIN ===== -->
+  <main>
+
+    <!-- Hero -->
+    <section class="hero" aria-labelledby="hero-heading">
+      <div class="hero-text">
+        <h1 id="hero-heading">From Hypertext to the World Wide Web</h1>
+        <p>
+          In 1989, a simple proposal at CERN changed the world forever. Tim Berners-Lee imagined
+          a system where documents could link to other documents — turning a research network
+          into the global information web we know today.
+        </p>
+        <p>
+          This site explores how <strong>hypertext</strong> became the foundation of the
+          World Wide Web, and why it remains one of the most important inventions of the
+          modern era.
+        </p>
+      </div>
+      <div class="hero-image">
+        <!-- Schematic SVG representing the web concept -->
+        <svg viewBox="0 0 420 280" xmlns="http://www.w3.org/2000/svg" style="width:100%;border-radius:6px;background:#eef4f9;">
+          <defs>
+            <marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+              <path d="M0,0 L0,6 L8,3 z" fill="#3a7ca8"/>
+            </marker>
+          </defs>
+          <!-- Lines -->
+          <line x1="210" y1="140" x2="100" y2="60"  stroke="#3a7ca8" stroke-width="1.5" marker-end="url(#arrow)"/>
+          <line x1="210" y1="140" x2="320" y2="60"  stroke="#3a7ca8" stroke-width="1.5" marker-end="url(#arrow)"/>
+          <line x1="210" y1="140" x2="80"  y2="200" stroke="#3a7ca8" stroke-width="1.5" marker-end="url(#arrow)"/>
+          <line x1="210" y1="140" x2="340" y2="200" stroke="#3a7ca8" stroke-width="1.5" marker-end="url(#arrow)"/>
+          <line x1="210" y1="140" x2="210" y2="240" stroke="#3a7ca8" stroke-width="1.5" marker-end="url(#arrow)"/>
+          <line x1="100" y1="60"  x2="320" y2="60"  stroke="#c8873a" stroke-width="1" stroke-dasharray="4,4"/>
+          <line x1="80"  y1="200" x2="340" y2="200" stroke="#c8873a" stroke-width="1" stroke-dasharray="4,4"/>
+          <!-- Central node -->
+          <circle cx="210" cy="140" r="32" fill="#1a3a5c"/>
+          <text x="210" y="136" text-anchor="middle" fill="#fff" font-size="9" font-weight="bold" font-family="Georgia,serif">World</text>
+          <text x="210" y="148" text-anchor="middle" fill="#c8873a" font-size="9" font-weight="bold" font-family="Georgia,serif">Wide Web</text>
+          <!-- Satellite nodes -->
+          <circle cx="100" cy="60" r="24" fill="#3a7ca8"/>
+          <text x="100" y="57" text-anchor="middle" fill="#fff" font-size="8" font-family="Georgia,serif">HTTP</text>
+          <text x="100" y="68" text-anchor="middle" fill="#fff" font-size="8" font-family="Georgia,serif">Protocol</text>
+
+          <circle cx="320" cy="60" r="24" fill="#3a7ca8"/>
+          <text x="320" y="57" text-anchor="middle" fill="#fff" font-size="8" font-family="Georgia,serif">HTML</text>
+          <text x="320" y="68" text-anchor="middle" fill="#fff" font-size="8" font-family="Georgia,serif">Documents</text>
+
+          <circle cx="80"  cy="200" r="24" fill="#c8873a"/>
+          <text x="80" y="197"  text-anchor="middle" fill="#fff" font-size="8" font-family="Georgia,serif">Hyper</text>
+          <text x="80" y="208"  text-anchor="middle" fill="#fff" font-size="8" font-family="Georgia,serif">Links</text>
+
+          <circle cx="340" cy="200" r="24" fill="#c8873a"/>
+          <text x="340" y="197"  text-anchor="middle" fill="#fff" font-size="8" font-family="Georgia,serif">URL</text>
+          <text x="340" y="208"  text-anchor="middle" fill="#fff" font-size="8" font-family="Georgia,serif">Addresses</text>
+
+          <circle cx="210" cy="248" r="22" fill="#1a3a5c" opacity="0.8"/>
+          <text x="210" y="245" text-anchor="middle" fill="#fff" font-size="8" font-family="Georgia,serif">Web</text>
+          <text x="210" y="256" text-anchor="middle" fill="#c8873a" font-size="8" font-family="Georgia,serif">Browser</text>
+        </svg>
+      </div>
+    </section>
+
+    <!-- Stats Bar -->
+    <section class="stats-grid" aria-label="Key facts">
+      <div class="stat-card">
+        <span class="stat-value">1989</span>
+        <span class="stat-label">Year Tim Berners-Lee proposed the World Wide Web at CERN</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-value">5.4B+</span>
+        <span class="stat-label">Internet users worldwide as of 2023</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-value">1991</span>
+        <span class="stat-label">Year the first public website went live</span>
+      </div>
+    </section>
+
+    <!-- What Is Hypertext -->
+    <section class="cards-section" aria-labelledby="concepts-heading">
+      <h2 id="concepts-heading">Core Concepts</h2>
+      <div class="cards-grid">
+        <article class="card">
+          <div class="card-icon">🔗</div>
+          <h3>Hypertext</h3>
+          <p>Text that contains links to other texts, enabling non-linear reading and navigation across documents stored anywhere on the web.</p>
+        </article>
+        <article class="card">
+          <div class="card-icon">🌐</div>
+          <h3>The Web vs. The Internet</h3>
+          <p>The Internet is the infrastructure (cables, routers, protocols). The Web is a service built on top of it — a collection of linked hypertext pages.</p>
+        </article>
+        <article class="card">
+          <div class="card-icon">📄</div>
+          <h3>HTML</h3>
+          <p>HyperText Markup Language is the standard language for creating web pages, using hyperlinks to connect documents across the globe.</p>
+        </article>
+        <article class="card">
+          <div class="card-icon">📡</div>
+          <h3>HTTP</h3>
+          <p>HyperText Transfer Protocol governs how hypertext documents are transmitted between a web server and a browser.</p>
+        </article>
+        <article class="card">
+          <div class="card-icon">📍</div>
+          <h3>URL</h3>
+          <p>A Uniform Resource Locator is a web address that uniquely identifies the location of a hypertext resource on the internet.</p>
+        </article>
+        <article class="card">
+          <div class="card-icon">🖥️</div>
+          <h3>Web Browser</h3>
+          <p>Software (like Chrome or Firefox) that retrieves, renders, and navigates hypertext documents by interpreting HTML and CSS.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Quote + Sidebar -->
+    <section class="two-col" aria-labelledby="quote-heading">
+      <div class="content-panel">
+        <h2 id="quote-heading">Why Hypertext Changed Everything</h2>
+        <p>
+          Before the Web, information was siloed. Academic papers, manuals, and databases existed
+          in isolation. You couldn't follow a reference from one document directly into another;
+          you had to manually locate it, often in a different building or library.
+        </p>
+        <blockquote>
+          "The Web is more a social creation than a technical one. I designed it for a social effect —
+          to help people work together — and not as a technical toy."
+          <cite>— Tim Berners-Lee</cite>
+        </blockquote>
+        <p>
+          Hypertext solved this by embedding navigable links directly within content.
+          A reader could jump from a concept to its definition, from a citation to its source,
+          and from a website to any other website on the planet — instantly.
+        </p>
+        <p>
+          This simple idea — <strong>documents that link to other documents</strong> — became
+          the architectural backbone of the modern Web and enabled everything from Wikipedia
+          to e-commerce to social media.
+        </p>
+      </div>
+      <aside class="info-box" aria-label="Quick facts">
+        <h3>Quick Facts</h3>
+        <ul>
+          <li>Ted Nelson coined the term "hypertext" in 1963</li>
+          <li>Berners-Lee wrote the first proposal at CERN in 1989</li>
+          <li>First web server ran on a NeXT computer</li>
+          <li>The first website is still online at info.cern.ch</li>
+          <li>HTTP/1.1 was standardised in 1997</li>
+          <li>HTML5 was finalised in 2014</li>
+          <li>Over 1.9 billion websites exist today</li>
+        </ul>
+      </aside>
+    </section>
+
+    <!-- Comparison Table -->
+    <section class="full-section" aria-labelledby="table-heading">
+      <h2 id="table-heading">Hypertext vs. Traditional Text</h2>
+      <div class="table-wrapper">
+        <table>
+          <thead>
+            <tr>
+              <th>Feature</th>
+              <th>Traditional Text</th>
+              <th>Hypertext</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Navigation</strong></td>
+              <td>Linear — read from start to finish</td>
+              <td>Non-linear — follow links in any direction</td>
+            </tr>
+            <tr>
+              <td><strong>Cross-references</strong></td>
+              <td>Manual — "see page 47" or a bibliography</td>
+              <td>Instant — click a link to jump to any resource</td>
+            </tr>
+            <tr>
+              <td><strong>Media</strong></td>
+              <td>Primarily text and static images</td>
+              <td>Text, images, video, audio, interactive elements</td>
+            </tr>
+            <tr>
+              <td><strong>Location</strong></td>
+              <td>Physical medium (book, printout)</td>
+              <td>Distributed across servers worldwide</td>
+            </tr>
+            <tr>
+              <td><strong>Updating</strong></td>
+              <td>Requires reprinting or revision</td>
+              <td>Updated instantly on the server</td>
+            </tr>
+            <tr>
+              <td><strong>Accessibility</strong></td>
+              <td>Limited by geography and physical copies</td>
+              <td>Available anywhere with internet access</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <p><strong>HyperWeb</strong> — WPR171 Web Programming Project &copy; 2026</p>
+    <p>Belgium Campus iTversity &nbsp;|&nbsp; Group Project Milestone 1</p>
+  </footer>
+
+</body>
+</html>
